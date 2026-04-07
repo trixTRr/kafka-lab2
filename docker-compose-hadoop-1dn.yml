@@ -1,0 +1,38 @@
+services:
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: namenode
+    hostname: namenode
+    environment:
+      - CLUSTER_NAME=test
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check=false
+      - HDFS_CONF_dfs_datanode_use_datanode_hostname=true
+      - HDFS_CONF_dfs_client_use_datanode_hostname=true
+    ports:
+      - "9870:9870"
+      - "9000:9000"
+    volumes:
+      - hadoop_namenode:/hadoop/dfs/name
+    networks:
+      - hadoop_net
+
+  datanode1:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode1
+    hostname: datanode1
+    environment:
+      - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+      - HDFS_CONF_dfs_datanode_hostname=datanode1
+    volumes:
+      - hadoop_datanode1:/hadoop/dfs/data
+    networks:
+      - hadoop_net
+
+volumes:
+  hadoop_namenode:
+  hadoop_datanode1:
+
+networks:
+  hadoop_net:
+    driver: bridge
