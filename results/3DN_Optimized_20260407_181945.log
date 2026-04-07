@@ -1,0 +1,799 @@
+[38;5;6mspark [38;5;5m15:22:10.09 [0m[38;5;2mINFO [0m ==> 
+[38;5;6mspark [38;5;5m15:22:10.09 [0m[38;5;2mINFO [0m ==> [1mWelcome to the Bitnami spark container[0m
+[38;5;6mspark [38;5;5m15:22:10.10 [0m[38;5;2mINFO [0m ==> Subscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[38;5;6mspark [38;5;5m15:22:10.10 [0m[38;5;2mINFO [0m ==> Submit issues and feature requests at [1mhttps://github.com/bitnami/containers/issues[0m
+[38;5;6mspark [38;5;5m15:22:10.10 [0m[38;5;2mINFO [0m ==> 
+
+
+============================================================
+Starting 3DN_Optimized
+Optimization: ON
+============================================================
+
+ INITIAL MEMORY STATE:
+   Process memory: 37.71 MB
+System memory: 1936.46 MB / 7794.21 MB (24.8%)
+26/04/07 15:22:11 INFO SparkContext: Running Spark version 3.5.0
+26/04/07 15:22:11 INFO SparkContext: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+26/04/07 15:22:11 INFO SparkContext: Java version 17.0.10
+26/04/07 15:22:11 INFO ResourceUtils: ==============================================================
+26/04/07 15:22:11 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/04/07 15:22:11 INFO ResourceUtils: ==============================================================
+26/04/07 15:22:11 INFO SparkContext: Submitted application: 3DN_Optimized
+26/04/07 15:22:11 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/04/07 15:22:11 INFO ResourceProfile: Limiting resource is cpu
+26/04/07 15:22:11 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/04/07 15:22:11 INFO SecurityManager: Changing view acls to: spark
+26/04/07 15:22:11 INFO SecurityManager: Changing modify acls to: spark
+26/04/07 15:22:11 INFO SecurityManager: Changing view acls groups to: 
+26/04/07 15:22:11 INFO SecurityManager: Changing modify acls groups to: 
+26/04/07 15:22:11 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+26/04/07 15:22:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/04/07 15:22:11 INFO Utils: Successfully started service 'sparkDriver' on port 34697.
+26/04/07 15:22:11 INFO SparkEnv: Registering MapOutputTracker
+26/04/07 15:22:11 INFO SparkEnv: Registering BlockManagerMaster
+26/04/07 15:22:11 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/04/07 15:22:11 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/04/07 15:22:11 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/04/07 15:22:11 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-8b052527-af5c-4671-a020-b9fd12b317d2
+26/04/07 15:22:11 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/04/07 15:22:11 INFO SparkEnv: Registering OutputCommitCoordinator
+26/04/07 15:22:11 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/04/07 15:22:11 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/04/07 15:22:12 INFO Executor: Starting executor ID driver on host namenode
+26/04/07 15:22:12 INFO Executor: OS info Linux, 6.6.87.2-microsoft-standard-WSL2, amd64
+26/04/07 15:22:12 INFO Executor: Java version 17.0.10
+26/04/07 15:22:12 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/04/07 15:22:12 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@76035eb for default.
+26/04/07 15:22:12 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42779.
+26/04/07 15:22:12 INFO NettyBlockTransferService: Server created on namenode:42779
+26/04/07 15:22:12 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/04/07 15:22:12 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, namenode, 42779, None)
+26/04/07 15:22:12 INFO BlockManagerMasterEndpoint: Registering block manager namenode:42779 with 434.4 MiB RAM, BlockManagerId(driver, namenode, 42779, None)
+26/04/07 15:22:12 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, namenode, 42779, None)
+26/04/07 15:22:12 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, namenode, 42779, None)
+
+AFTER SPARK SESSION CREATION:
+Process memory: 37.71 MB (+0.0 MB)
+Optimization: 8 shuffle partitions
+
+Loading data from HDFS...
+26/04/07 15:22:12 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+26/04/07 15:22:12 INFO SharedState: Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+26/04/07 15:22:12 INFO InMemoryFileIndex: It took 45 ms to list leaf files for 1 paths.
+26/04/07 15:22:13 INFO InMemoryFileIndex: It took 6 ms to list leaf files for 1 paths.
+26/04/07 15:22:14 INFO FileSourceStrategy: Pushed Filters: 
+26/04/07 15:22:14 INFO FileSourceStrategy: Post-Scan Filters: (length(trim(value#0, None)) > 0)
+26/04/07 15:22:14 INFO CodeGenerator: Code generated in 104.352605 ms
+26/04/07 15:22:14 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 201.4 KiB, free 434.2 MiB)
+26/04/07 15:22:14 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.8 KiB, free 434.2 MiB)
+26/04/07 15:22:14 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on namenode:42779 (size: 34.8 KiB, free: 434.4 MiB)
+26/04/07 15:22:14 INFO SparkContext: Created broadcast 0 from csv at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:14 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+26/04/07 15:22:14 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:14 INFO DAGScheduler: Got job 0 (csv at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:14 INFO DAGScheduler: Final stage: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:14 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:14 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:14 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:14 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 13.5 KiB, free 434.2 MiB)
+26/04/07 15:22:14 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 6.4 KiB, free 434.1 MiB)
+26/04/07 15:22:14 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on namenode:42779 (size: 6.4 KiB, free: 434.4 MiB)
+26/04/07 15:22:14 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:14 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:14 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+26/04/07 15:22:14 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (namenode, executor driver, partition 0, ANY, 8220 bytes) 
+26/04/07 15:22:14 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+26/04/07 15:22:14 INFO CodeGenerator: Code generated in 9.352963 ms
+26/04/07 15:22:14 INFO FileScanRDD: Reading File path: hdfs://namenode:9000/user/data/dataset.csv, range: 0-4194304, partition values: [empty row]
+26/04/07 15:22:14 INFO CodeGenerator: Code generated in 7.755147 ms
+26/04/07 15:22:14 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1727 bytes result sent to driver
+26/04/07 15:22:14 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 186 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:14 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+26/04/07 15:22:14 INFO DAGScheduler: ResultStage 0 (csv at NativeMethodAccessorImpl.java:0) finished in 0.263 s
+26/04/07 15:22:14 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:14 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+26/04/07 15:22:14 INFO DAGScheduler: Job 0 finished: csv at NativeMethodAccessorImpl.java:0, took 0.287981 s
+26/04/07 15:22:14 INFO CodeGenerator: Code generated in 6.479386 ms
+26/04/07 15:22:14 INFO FileSourceStrategy: Pushed Filters: 
+26/04/07 15:22:14 INFO FileSourceStrategy: Post-Scan Filters: 
+26/04/07 15:22:14 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 201.4 KiB, free 434.0 MiB)
+26/04/07 15:22:14 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.8 KiB, free 433.9 MiB)
+26/04/07 15:22:14 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on namenode:42779 (size: 34.8 KiB, free: 434.3 MiB)
+26/04/07 15:22:14 INFO SparkContext: Created broadcast 2 from csv at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:14 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+26/04/07 15:22:14 INFO SparkContext: Starting job: csv at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:14 INFO DAGScheduler: Got job 1 (csv at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:14 INFO DAGScheduler: Final stage: ResultStage 1 (csv at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:14 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:14 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:14 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[9] at csv at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:14 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 27.8 KiB, free 433.9 MiB)
+26/04/07 15:22:14 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 12.9 KiB, free 433.9 MiB)
+26/04/07 15:22:14 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on namenode:42779 (size: 12.9 KiB, free: 434.3 MiB)
+26/04/07 15:22:14 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:14 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (MapPartitionsRDD[9] at csv at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:14 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks resource profile 0
+26/04/07 15:22:14 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (namenode, executor driver, partition 0, ANY, 8220 bytes) 
+26/04/07 15:22:14 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 2) (namenode, executor driver, partition 1, ANY, 8220 bytes) 
+26/04/07 15:22:14 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+26/04/07 15:22:14 INFO Executor: Running task 1.0 in stage 1.0 (TID 2)
+26/04/07 15:22:15 INFO BlockManagerInfo: Removed broadcast_0_piece0 on namenode:42779 in memory (size: 34.8 KiB, free: 434.3 MiB)
+26/04/07 15:22:15 INFO CodeGenerator: Code generated in 6.119 ms
+26/04/07 15:22:15 INFO FileScanRDD: Reading File path: hdfs://namenode:9000/user/data/dataset.csv, range: 0-4194304, partition values: [empty row]
+26/04/07 15:22:15 INFO FileScanRDD: Reading File path: hdfs://namenode:9000/user/data/dataset.csv, range: 4194304-6727825, partition values: [empty row]
+26/04/07 15:22:15 INFO BlockManagerInfo: Removed broadcast_1_piece0 on namenode:42779 in memory (size: 6.4 KiB, free: 434.4 MiB)
+26/04/07 15:22:15 INFO Executor: Finished task 1.0 in stage 1.0 (TID 2). 1785 bytes result sent to driver
+26/04/07 15:22:15 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 2) in 367 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:15 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1742 bytes result sent to driver
+26/04/07 15:22:15 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 431 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:15 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+26/04/07 15:22:15 INFO DAGScheduler: ResultStage 1 (csv at NativeMethodAccessorImpl.java:0) finished in 0.462 s
+26/04/07 15:22:15 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:15 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+26/04/07 15:22:15 INFO DAGScheduler: Job 1 finished: csv at NativeMethodAccessorImpl.java:0, took 0.467431 s
+26/04/07 15:22:15 INFO FileSourceStrategy: Pushed Filters: 
+26/04/07 15:22:15 INFO FileSourceStrategy: Post-Scan Filters: 
+26/04/07 15:22:15 INFO CodeGenerator: Code generated in 5.948202 ms
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 201.4 KiB, free 433.9 MiB)
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 34.8 KiB, free 433.9 MiB)
+26/04/07 15:22:15 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on namenode:42779 (size: 34.8 KiB, free: 434.3 MiB)
+26/04/07 15:22:15 INFO SparkContext: Created broadcast 4 from count at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:15 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+26/04/07 15:22:15 INFO DAGScheduler: Registering RDD 13 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 0
+26/04/07 15:22:15 INFO DAGScheduler: Got map stage job 2 (count at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:15 INFO DAGScheduler: Final stage: ShuffleMapStage 2 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:15 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:15 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:15 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[13] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 18.0 KiB, free 433.9 MiB)
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 8.9 KiB, free 433.9 MiB)
+26/04/07 15:22:15 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on namenode:42779 (size: 8.9 KiB, free: 434.3 MiB)
+26/04/07 15:22:15 INFO BlockManagerInfo: Removed broadcast_3_piece0 on namenode:42779 in memory (size: 12.9 KiB, free: 434.3 MiB)
+26/04/07 15:22:15 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:15 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[13] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:15 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks resource profile 0
+26/04/07 15:22:15 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 3) (namenode, executor driver, partition 0, ANY, 8209 bytes) 
+26/04/07 15:22:15 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 4) (namenode, executor driver, partition 1, ANY, 8209 bytes) 
+26/04/07 15:22:15 INFO Executor: Running task 0.0 in stage 2.0 (TID 3)
+26/04/07 15:22:15 INFO Executor: Running task 1.0 in stage 2.0 (TID 4)
+26/04/07 15:22:15 INFO CodeGenerator: Code generated in 5.652177 ms
+26/04/07 15:22:15 INFO FileScanRDD: Reading File path: hdfs://namenode:9000/user/data/dataset.csv, range: 0-4194304, partition values: [empty row]
+26/04/07 15:22:15 INFO FileScanRDD: Reading File path: hdfs://namenode:9000/user/data/dataset.csv, range: 4194304-6727825, partition values: [empty row]
+26/04/07 15:22:15 INFO CodeGenerator: Code generated in 7.124798 ms
+26/04/07 15:22:15 INFO Executor: Finished task 0.0 in stage 2.0 (TID 3). 1924 bytes result sent to driver
+26/04/07 15:22:15 INFO Executor: Finished task 1.0 in stage 2.0 (TID 4). 1924 bytes result sent to driver
+26/04/07 15:22:15 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 4) in 111 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:15 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 3) in 112 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:15 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+26/04/07 15:22:15 INFO DAGScheduler: ShuffleMapStage 2 (count at NativeMethodAccessorImpl.java:0) finished in 0.130 s
+26/04/07 15:22:15 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:15 INFO DAGScheduler: running: Set()
+26/04/07 15:22:15 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:15 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:15 INFO CodeGenerator: Code generated in 7.351924 ms
+26/04/07 15:22:15 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:15 INFO DAGScheduler: Got job 3 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:15 INFO DAGScheduler: Final stage: ResultStage 4 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:15 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+26/04/07 15:22:15 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:15 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[16] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 12.5 KiB, free 433.9 MiB)
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 433.9 MiB)
+26/04/07 15:22:15 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on namenode:42779 (size: 5.9 KiB, free: 434.3 MiB)
+26/04/07 15:22:15 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:15 INFO BlockManagerInfo: Removed broadcast_5_piece0 on namenode:42779 in memory (size: 8.9 KiB, free: 434.3 MiB)
+26/04/07 15:22:15 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[16] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:15 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+26/04/07 15:22:15 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 5) (namenode, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+26/04/07 15:22:15 INFO Executor: Running task 0.0 in stage 4.0 (TID 5)
+26/04/07 15:22:15 INFO ShuffleBlockFetcherIterator: Getting 2 (120.0 B) non-empty blocks including 2 (120.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:15 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 7 ms
+26/04/07 15:22:15 INFO CodeGenerator: Code generated in 10.349228 ms
+26/04/07 15:22:15 INFO Executor: Finished task 0.0 in stage 4.0 (TID 5). 3995 bytes result sent to driver
+26/04/07 15:22:15 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 5) in 51 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:15 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+26/04/07 15:22:15 INFO DAGScheduler: ResultStage 4 (count at NativeMethodAccessorImpl.java:0) finished in 0.062 s
+26/04/07 15:22:15 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:15 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+26/04/07 15:22:15 INFO DAGScheduler: Job 3 finished: count at NativeMethodAccessorImpl.java:0, took 0.069228 s
+Data loaded: 150,000 rows, 8 columns
+Load time: 3.54s
+After data load: 37.71 MB (+0.0 MB)
+Caching data...
+26/04/07 15:22:15 INFO FileSourceStrategy: Pushed Filters: 
+26/04/07 15:22:15 INFO FileSourceStrategy: Post-Scan Filters: 
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 201.4 KiB, free 433.7 MiB)
+26/04/07 15:22:15 INFO BlockManagerInfo: Removed broadcast_4_piece0 on namenode:42779 in memory (size: 34.8 KiB, free: 434.4 MiB)
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 34.8 KiB, free 433.9 MiB)
+26/04/07 15:22:15 INFO BlockManagerInfo: Removed broadcast_6_piece0 on namenode:42779 in memory (size: 5.9 KiB, free: 434.4 MiB)
+26/04/07 15:22:15 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on namenode:42779 (size: 34.8 KiB, free: 434.3 MiB)
+26/04/07 15:22:15 INFO SparkContext: Created broadcast 7 from count at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:15 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+26/04/07 15:22:15 INFO DAGScheduler: Got job 4 (count at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:15 INFO DAGScheduler: Final stage: ResultStage 5 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:15 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:15 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:15 INFO DAGScheduler: Submitting ResultStage 5 (FileScan csv [user_id#17,age#18,salary#19,city#20,purchases#21,rating#22,is_active#23,registration_date#24] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[hdfs://namenode:9000/user/data/dataset.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<user_id:int,age:int,salary:int,city:string,purchases:int,rating:double,is_active:int,regis...
+ MapPartitionsRDD[20] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 14.9 KiB, free 433.9 MiB)
+26/04/07 15:22:15 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 7.6 KiB, free 433.9 MiB)
+26/04/07 15:22:15 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on namenode:42779 (size: 7.6 KiB, free: 434.3 MiB)
+26/04/07 15:22:15 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:15 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 5 (FileScan csv [user_id#17,age#18,salary#19,city#20,purchases#21,rating#22,is_active#23,registration_date#24] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[hdfs://namenode:9000/user/data/dataset.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<user_id:int,age:int,salary:int,city:string,purchases:int,rating:double,is_active:int,regis...
+ MapPartitionsRDD[20] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:15 INFO TaskSchedulerImpl: Adding task set 5.0 with 2 tasks resource profile 0
+26/04/07 15:22:15 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 6) (namenode, executor driver, partition 0, ANY, 8220 bytes) 
+26/04/07 15:22:15 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 7) (namenode, executor driver, partition 1, ANY, 8220 bytes) 
+26/04/07 15:22:15 INFO Executor: Running task 0.0 in stage 5.0 (TID 6)
+26/04/07 15:22:15 INFO Executor: Running task 1.0 in stage 5.0 (TID 7)
+26/04/07 15:22:15 INFO FileScanRDD: Reading File path: hdfs://namenode:9000/user/data/dataset.csv, range: 4194304-6727825, partition values: [empty row]
+26/04/07 15:22:15 INFO FileScanRDD: Reading File path: hdfs://namenode:9000/user/data/dataset.csv, range: 0-4194304, partition values: [empty row]
+26/04/07 15:22:15 INFO CodeGenerator: Code generated in 11.077662 ms
+26/04/07 15:22:16 INFO MemoryStore: Block rdd_20_1 stored as values in memory (estimated size 747.0 KiB, free 433.2 MiB)
+26/04/07 15:22:16 INFO BlockManagerInfo: Added rdd_20_1 in memory on namenode:42779 (size: 747.0 KiB, free: 433.6 MiB)
+26/04/07 15:22:16 INFO Executor: 1 block locks were not released by task 1.0 in stage 5.0 (TID 7)
+[rdd_20_1]
+26/04/07 15:22:16 INFO Executor: Finished task 1.0 in stage 5.0 (TID 7). 1373 bytes result sent to driver
+26/04/07 15:22:16 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 7) in 411 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:16 INFO MemoryStore: Block rdd_20_0 stored as values in memory (estimated size 1263.1 KiB, free 432.0 MiB)
+26/04/07 15:22:16 INFO BlockManagerInfo: Added rdd_20_0 in memory on namenode:42779 (size: 1263.1 KiB, free: 432.4 MiB)
+26/04/07 15:22:16 INFO Executor: 1 block locks were not released by task 0.0 in stage 5.0 (TID 6)
+[rdd_20_0]
+26/04/07 15:22:16 INFO Executor: Finished task 0.0 in stage 5.0 (TID 6). 1373 bytes result sent to driver
+26/04/07 15:22:16 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 6) in 504 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+26/04/07 15:22:16 INFO DAGScheduler: ResultStage 5 (count at NativeMethodAccessorImpl.java:0) finished in 0.515 s
+26/04/07 15:22:16 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Killing all running tasks in stage 5: Stage finished
+26/04/07 15:22:16 INFO DAGScheduler: Registering RDD 25 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 1
+26/04/07 15:22:16 INFO DAGScheduler: Got map stage job 5 (count at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:16 INFO DAGScheduler: Final stage: ShuffleMapStage 6 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:16 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:16 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:16 INFO DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[25] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 22.8 KiB, free 431.9 MiB)
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 10.7 KiB, free 431.9 MiB)
+26/04/07 15:22:16 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on namenode:42779 (size: 10.7 KiB, free: 432.4 MiB)
+26/04/07 15:22:16 INFO SparkContext: Created broadcast 9 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:16 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[25] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Adding task set 6.0 with 2 tasks resource profile 0
+26/04/07 15:22:16 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 8) (namenode, executor driver, partition 0, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:16 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 9) (namenode, executor driver, partition 1, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:16 INFO Executor: Running task 0.0 in stage 6.0 (TID 8)
+26/04/07 15:22:16 INFO Executor: Running task 1.0 in stage 6.0 (TID 9)
+26/04/07 15:22:16 INFO BlockManager: Found block rdd_20_1 locally
+26/04/07 15:22:16 INFO BlockManager: Found block rdd_20_0 locally
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 4.203506 ms
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 13.712989 ms
+26/04/07 15:22:16 INFO Executor: Finished task 0.0 in stage 6.0 (TID 8). 2109 bytes result sent to driver
+26/04/07 15:22:16 INFO Executor: Finished task 1.0 in stage 6.0 (TID 9). 2109 bytes result sent to driver
+26/04/07 15:22:16 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 9) in 58 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:16 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 8) in 58 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+26/04/07 15:22:16 INFO DAGScheduler: ShuffleMapStage 6 (count at NativeMethodAccessorImpl.java:0) finished in 0.071 s
+26/04/07 15:22:16 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:16 INFO DAGScheduler: running: Set()
+26/04/07 15:22:16 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:16 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:16 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:16 INFO DAGScheduler: Got job 6 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:16 INFO DAGScheduler: Final stage: ResultStage 8 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:16 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 7)
+26/04/07 15:22:16 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:16 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[28] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 12.5 KiB, free 431.9 MiB)
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 431.9 MiB)
+26/04/07 15:22:16 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on namenode:42779 (size: 5.9 KiB, free: 432.3 MiB)
+26/04/07 15:22:16 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:16 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[28] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks resource profile 0
+26/04/07 15:22:16 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 10) (namenode, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+26/04/07 15:22:16 INFO Executor: Running task 0.0 in stage 8.0 (TID 10)
+26/04/07 15:22:16 INFO ShuffleBlockFetcherIterator: Getting 2 (120.0 B) non-empty blocks including 2 (120.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:16 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/04/07 15:22:16 INFO Executor: Finished task 0.0 in stage 8.0 (TID 10). 3995 bytes result sent to driver
+26/04/07 15:22:16 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 10) in 9 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+26/04/07 15:22:16 INFO DAGScheduler: ResultStage 8 (count at NativeMethodAccessorImpl.java:0) finished in 0.014 s
+26/04/07 15:22:16 INFO DAGScheduler: Job 6 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Killing all running tasks in stage 8: Stage finished
+26/04/07 15:22:16 INFO DAGScheduler: Job 6 finished: count at NativeMethodAccessorImpl.java:0, took 0.017865 s
+Cache time: 0.72s
+After caching: 37.71 MB (+0.0 MB)
+
+--- Executing analytics ---
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 6.029075 ms
+26/04/07 15:22:16 INFO DefaultCachedBatchSerializer: Predicate isnotnull(is_active#23) generates partition filter: ((is_active.count#532 - is_active.nullCount#531) > 0)
+26/04/07 15:22:16 INFO DefaultCachedBatchSerializer: Predicate (is_active#23 = 1) generates partition filter: ((is_active.lowerBound#530 <= 1) AND (1 <= is_active.upperBound#529))
+26/04/07 15:22:16 INFO DAGScheduler: Registering RDD 33 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 2
+26/04/07 15:22:16 INFO DAGScheduler: Got map stage job 7 (count at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:16 INFO DAGScheduler: Final stage: ShuffleMapStage 9 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:16 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:16 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:16 INFO DAGScheduler: Submitting ShuffleMapStage 9 (MapPartitionsRDD[33] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 32.9 KiB, free 431.9 MiB)
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 15.4 KiB, free 431.9 MiB)
+26/04/07 15:22:16 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on namenode:42779 (size: 15.4 KiB, free: 432.3 MiB)
+26/04/07 15:22:16 INFO SparkContext: Created broadcast 11 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:16 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[33] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Adding task set 9.0 with 2 tasks resource profile 0
+26/04/07 15:22:16 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 11) (namenode, executor driver, partition 0, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:16 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 12) (namenode, executor driver, partition 1, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:16 INFO Executor: Running task 0.0 in stage 9.0 (TID 11)
+26/04/07 15:22:16 INFO Executor: Running task 1.0 in stage 9.0 (TID 12)
+26/04/07 15:22:16 INFO BlockManager: Found block rdd_20_1 locally
+26/04/07 15:22:16 INFO BlockManager: Found block rdd_20_0 locally
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 5.099289 ms
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 9.881085 ms
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 6.873878 ms
+26/04/07 15:22:16 INFO Executor: Finished task 1.0 in stage 9.0 (TID 12). 2165 bytes result sent to driver
+26/04/07 15:22:16 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 12) in 84 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:16 INFO Executor: Finished task 0.0 in stage 9.0 (TID 11). 2165 bytes result sent to driver
+26/04/07 15:22:16 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 11) in 88 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+26/04/07 15:22:16 INFO DAGScheduler: ShuffleMapStage 9 (count at NativeMethodAccessorImpl.java:0) finished in 0.101 s
+26/04/07 15:22:16 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:16 INFO DAGScheduler: running: Set()
+26/04/07 15:22:16 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:16 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:16 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:16 INFO DAGScheduler: Got job 8 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:16 INFO DAGScheduler: Final stage: ResultStage 11 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:16 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 10)
+26/04/07 15:22:16 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:16 INFO DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[36] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 12.5 KiB, free 431.8 MiB)
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 431.8 MiB)
+26/04/07 15:22:16 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on namenode:42779 (size: 5.9 KiB, free: 432.3 MiB)
+26/04/07 15:22:16 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:16 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[36] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks resource profile 0
+26/04/07 15:22:16 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 13) (namenode, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+26/04/07 15:22:16 INFO Executor: Running task 0.0 in stage 11.0 (TID 13)
+26/04/07 15:22:16 INFO ShuffleBlockFetcherIterator: Getting 2 (120.0 B) non-empty blocks including 2 (120.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:16 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/04/07 15:22:16 INFO Executor: Finished task 0.0 in stage 11.0 (TID 13). 3995 bytes result sent to driver
+26/04/07 15:22:16 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 13) in 8 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+26/04/07 15:22:16 INFO DAGScheduler: ResultStage 11 (count at NativeMethodAccessorImpl.java:0) finished in 0.014 s
+26/04/07 15:22:16 INFO DAGScheduler: Job 8 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Killing all running tasks in stage 11: Stage finished
+26/04/07 15:22:16 INFO DAGScheduler: Job 8 finished: count at NativeMethodAccessorImpl.java:0, took 0.017882 s
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 31.694218 ms
+26/04/07 15:22:16 INFO DAGScheduler: Registering RDD 41 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 3
+26/04/07 15:22:16 INFO DAGScheduler: Got map stage job 9 (count at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:16 INFO DAGScheduler: Final stage: ShuffleMapStage 12 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:16 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:16 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:16 INFO DAGScheduler: Submitting ShuffleMapStage 12 (MapPartitionsRDD[41] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 33.0 KiB, free 431.8 MiB)
+26/04/07 15:22:16 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 15.0 KiB, free 431.8 MiB)
+26/04/07 15:22:16 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on namenode:42779 (size: 15.0 KiB, free: 432.3 MiB)
+26/04/07 15:22:16 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:16 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 12 (MapPartitionsRDD[41] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:16 INFO TaskSchedulerImpl: Adding task set 12.0 with 2 tasks resource profile 0
+26/04/07 15:22:16 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 14) (namenode, executor driver, partition 0, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:16 INFO TaskSetManager: Starting task 1.0 in stage 12.0 (TID 15) (namenode, executor driver, partition 1, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:16 INFO Executor: Running task 0.0 in stage 12.0 (TID 14)
+26/04/07 15:22:16 INFO Executor: Running task 1.0 in stage 12.0 (TID 15)
+26/04/07 15:22:16 INFO BlockManager: Found block rdd_20_1 locally
+26/04/07 15:22:16 INFO BlockManager: Found block rdd_20_0 locally
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 8.039389 ms
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 21.431765 ms
+26/04/07 15:22:16 INFO CodeGenerator: Code generated in 5.612806 ms
+26/04/07 15:22:17 INFO Executor: Finished task 1.0 in stage 12.0 (TID 15). 2477 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 1.0 in stage 12.0 (TID 15) in 115 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 12.0 (TID 14). 2477 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 14) in 123 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ShuffleMapStage 12 (count at NativeMethodAccessorImpl.java:0) finished in 0.131 s
+26/04/07 15:22:17 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:17 INFO DAGScheduler: running: Set()
+26/04/07 15:22:17 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:17 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:17 INFO ShufflePartitionsUtil: For shuffle(3), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 14.256852 ms
+26/04/07 15:22:17 INFO DAGScheduler: Registering RDD 44 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 4
+26/04/07 15:22:17 INFO DAGScheduler: Got map stage job 10 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ShuffleMapStage 14 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 13)
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ShuffleMapStage 14 (MapPartitionsRDD[44] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 49.9 KiB, free 431.7 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 22.6 KiB, free 431.7 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on namenode:42779 (size: 22.6 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 14 (MapPartitionsRDD[44] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 14.0 with 1 tasks resource profile 0
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 16) (namenode, executor driver, partition 0, NODE_LOCAL, 7604 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 14.0 (TID 16)
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Getting 2 (784.0 B) non-empty blocks including 2 (784.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 16.920004 ms
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 14.0 (TID 16). 5545 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 16) in 39 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ShuffleMapStage 14 (count at NativeMethodAccessorImpl.java:0) finished in 0.046 s
+26/04/07 15:22:17 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:17 INFO DAGScheduler: running: Set()
+26/04/07 15:22:17 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:17 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 6.751651 ms
+26/04/07 15:22:17 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:17 INFO DAGScheduler: Got job 11 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ResultStage 17 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 16)
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ResultStage 17 (MapPartitionsRDD[47] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 12.5 KiB, free 431.7 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 431.7 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on namenode:42779 (size: 5.9 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 17 (MapPartitionsRDD[47] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 17.0 with 1 tasks resource profile 0
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_11_piece0 on namenode:42779 in memory (size: 15.4 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 17.0 (TID 17) (namenode, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 17.0 (TID 17)
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Getting 1 (60.0 B) non-empty blocks including 1 (60.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_9_piece0 on namenode:42779 in memory (size: 10.7 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_8_piece0 on namenode:42779 in memory (size: 7.6 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 5.997723 ms
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_13_piece0 on namenode:42779 in memory (size: 15.0 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 17.0 (TID 17). 3995 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 17.0 (TID 17) in 16 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 17.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ResultStage 17 (count at NativeMethodAccessorImpl.java:0) finished in 0.026 s
+26/04/07 15:22:17 INFO DAGScheduler: Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 17: Stage finished
+26/04/07 15:22:17 INFO DAGScheduler: Job 11 finished: count at NativeMethodAccessorImpl.java:0, took 0.029916 s
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_12_piece0 on namenode:42779 in memory (size: 5.9 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_10_piece0 on namenode:42779 in memory (size: 5.9 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_14_piece0 on namenode:42779 in memory (size: 22.6 KiB, free: 432.4 MiB)
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 14.022323 ms
+26/04/07 15:22:17 INFO DAGScheduler: Registering RDD 52 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 5
+26/04/07 15:22:17 INFO DAGScheduler: Got map stage job 12 (count at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ShuffleMapStage 18 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ShuffleMapStage 18 (MapPartitionsRDD[52] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 42.7 KiB, free 431.9 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 19.5 KiB, free 431.9 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on namenode:42779 (size: 19.5 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 18 (MapPartitionsRDD[52] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 18.0 with 2 tasks resource profile 0
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 18.0 (TID 18) (namenode, executor driver, partition 0, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 1.0 in stage 18.0 (TID 19) (namenode, executor driver, partition 1, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 18.0 (TID 18)
+26/04/07 15:22:17 INFO Executor: Running task 1.0 in stage 18.0 (TID 19)
+26/04/07 15:22:17 INFO BlockManager: Found block rdd_20_0 locally
+26/04/07 15:22:17 INFO BlockManager: Found block rdd_20_1 locally
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 18.088879 ms
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 4.427536 ms
+26/04/07 15:22:17 INFO Executor: Finished task 1.0 in stage 18.0 (TID 19). 2477 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 1.0 in stage 18.0 (TID 19) in 59 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 18.0 (TID 18). 2477 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 18.0 (TID 18) in 65 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 18.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ShuffleMapStage 18 (count at NativeMethodAccessorImpl.java:0) finished in 0.071 s
+26/04/07 15:22:17 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:17 INFO DAGScheduler: running: Set()
+26/04/07 15:22:17 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:17 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:17 INFO ShufflePartitionsUtil: For shuffle(5), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 14.202407 ms
+26/04/07 15:22:17 INFO DAGScheduler: Registering RDD 55 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 6
+26/04/07 15:22:17 INFO DAGScheduler: Got map stage job 13 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ShuffleMapStage 20 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 19)
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ShuffleMapStage 20 (MapPartitionsRDD[55] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 51.2 KiB, free 431.8 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 23.3 KiB, free 431.8 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on namenode:42779 (size: 23.3 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 20 (MapPartitionsRDD[55] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 20.0 with 1 tasks resource profile 0
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 20.0 (TID 20) (namenode, executor driver, partition 0, NODE_LOCAL, 7604 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 20.0 (TID 20)
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Getting 2 (320.0 B) non-empty blocks including 2 (320.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 14.855249 ms
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 20.0 (TID 20). 5545 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 20.0 (TID 20) in 31 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 20.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ShuffleMapStage 20 (count at NativeMethodAccessorImpl.java:0) finished in 0.037 s
+26/04/07 15:22:17 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:17 INFO DAGScheduler: running: Set()
+26/04/07 15:22:17 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:17 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:17 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:17 INFO DAGScheduler: Got job 14 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ResultStage 23 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 22)
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ResultStage 23 (MapPartitionsRDD[58] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 12.5 KiB, free 431.8 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 431.8 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on namenode:42779 (size: 6.0 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 23 (MapPartitionsRDD[58] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 23.0 with 1 tasks resource profile 0
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 23.0 (TID 21) (namenode, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 23.0 (TID 21)
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Getting 1 (60.0 B) non-empty blocks including 1 (60.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 23.0 (TID 21). 3995 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 23.0 (TID 21) in 8 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 23.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ResultStage 23 (count at NativeMethodAccessorImpl.java:0) finished in 0.013 s
+26/04/07 15:22:17 INFO DAGScheduler: Job 14 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 23: Stage finished
+26/04/07 15:22:17 INFO DAGScheduler: Job 14 finished: count at NativeMethodAccessorImpl.java:0, took 0.016220 s
+26/04/07 15:22:17 INFO DAGScheduler: Registering RDD 63 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 7
+26/04/07 15:22:17 INFO DAGScheduler: Got map stage job 15 (count at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ShuffleMapStage 24 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ShuffleMapStage 24 (MapPartitionsRDD[63] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 33.1 KiB, free 431.8 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 15.0 KiB, free 431.8 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on namenode:42779 (size: 15.0 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 24 (MapPartitionsRDD[63] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 24.0 with 2 tasks resource profile 0
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 24.0 (TID 22) (namenode, executor driver, partition 0, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 1.0 in stage 24.0 (TID 23) (namenode, executor driver, partition 1, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 1.0 in stage 24.0 (TID 23)
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 24.0 (TID 22)
+26/04/07 15:22:17 INFO BlockManager: Found block rdd_20_0 locally
+26/04/07 15:22:17 INFO BlockManager: Found block rdd_20_1 locally
+26/04/07 15:22:17 INFO Executor: Finished task 1.0 in stage 24.0 (TID 23). 2477 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 1.0 in stage 24.0 (TID 23) in 37 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 24.0 (TID 22). 2477 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 24.0 (TID 22) in 43 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 24.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ShuffleMapStage 24 (count at NativeMethodAccessorImpl.java:0) finished in 0.050 s
+26/04/07 15:22:17 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:17 INFO DAGScheduler: running: Set()
+26/04/07 15:22:17 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:17 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:17 INFO ShufflePartitionsUtil: For shuffle(7), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+26/04/07 15:22:17 INFO DAGScheduler: Registering RDD 66 (count at NativeMethodAccessorImpl.java:0) as input to shuffle 8
+26/04/07 15:22:17 INFO DAGScheduler: Got map stage job 16 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ShuffleMapStage 26 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 25)
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ShuffleMapStage 26 (MapPartitionsRDD[66] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 50.0 KiB, free 431.7 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 22.6 KiB, free 431.7 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on namenode:42779 (size: 22.6 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 26 (MapPartitionsRDD[66] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 26.0 with 1 tasks resource profile 0
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 26.0 (TID 24) (namenode, executor driver, partition 0, NODE_LOCAL, 7604 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 26.0 (TID 24)
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Getting 2 (784.0 B) non-empty blocks including 2 (784.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 26.0 (TID 24). 5545 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 26.0 (TID 24) in 13 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 26.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ShuffleMapStage 26 (count at NativeMethodAccessorImpl.java:0) finished in 0.019 s
+26/04/07 15:22:17 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:17 INFO DAGScheduler: running: Set()
+26/04/07 15:22:17 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:17 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:17 INFO SparkContext: Starting job: count at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:17 INFO DAGScheduler: Got job 17 (count at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ResultStage 29 (count at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 28)
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ResultStage 29 (MapPartitionsRDD[69] at count at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 12.5 KiB, free 431.7 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 5.9 KiB, free 431.7 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on namenode:42779 (size: 5.9 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 29 (MapPartitionsRDD[69] at count at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 29.0 with 1 tasks resource profile 0
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 29.0 (TID 25) (namenode, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 29.0 (TID 25)
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Getting 1 (60.0 B) non-empty blocks including 1 (60.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 29.0 (TID 25). 4081 bytes result sent to driver
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_18_piece0 on namenode:42779 in memory (size: 6.0 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 29.0 (TID 25) in 12 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 29.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ResultStage 29 (count at NativeMethodAccessorImpl.java:0) finished in 0.018 s
+26/04/07 15:22:17 INFO DAGScheduler: Job 17 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 29: Stage finished
+26/04/07 15:22:17 INFO DAGScheduler: Job 17 finished: count at NativeMethodAccessorImpl.java:0, took 0.021092 s
+Metrics saved to ./metrics.json
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_16_piece0 on namenode:42779 in memory (size: 19.5 KiB, free: 432.3 MiB)
+Metrics saved to /results/metrics.json
+
+============================================================
+MEMORY USAGE SUMMARY
+============================================================
+Initial memory:        37.71 MB
+After Spark init:      37.71 MB (+0.0 MB)
+After data load:       37.71 MB (+0.0 MB)
+After caching:         37.71 MB
+After queries:         37.71 MB
+────────────────────────────────────────────────────────────
+PEAK MEMORY:           37.71 MB
+TOTAL INCREASE:        0.0 MB
+============================================================
+
+--- City Statistics (top 5) ---
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_19_piece0 on namenode:42779 in memory (size: 15.0 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_15_piece0 on namenode:42779 in memory (size: 5.9 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_17_piece0 on namenode:42779 in memory (size: 23.3 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Removed broadcast_20_piece0 on namenode:42779 in memory (size: 22.6 KiB, free: 432.4 MiB)
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 14.649788 ms
+26/04/07 15:22:17 INFO DAGScheduler: Registering RDD 74 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 9
+26/04/07 15:22:17 INFO DAGScheduler: Got map stage job 18 (showString at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ShuffleMapStage 30 (showString at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ShuffleMapStage 30 (MapPartitionsRDD[74] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 52.6 KiB, free 431.9 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 23.2 KiB, free 431.9 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on namenode:42779 (size: 23.2 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 30 (MapPartitionsRDD[74] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 30.0 with 2 tasks resource profile 0
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 30.0 (TID 26) (namenode, executor driver, partition 0, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 1.0 in stage 30.0 (TID 27) (namenode, executor driver, partition 1, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 1.0 in stage 30.0 (TID 27)
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 30.0 (TID 26)
+26/04/07 15:22:17 INFO BlockManager: Found block rdd_20_0 locally
+26/04/07 15:22:17 INFO BlockManager: Found block rdd_20_1 locally
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 8.127863 ms
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 13.068732 ms
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 2.604377 ms
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 3.226964 ms
+26/04/07 15:22:17 INFO Executor: Finished task 1.0 in stage 30.0 (TID 27). 2477 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 1.0 in stage 30.0 (TID 27) in 125 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 30.0 (TID 26). 2477 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 30.0 (TID 26) in 132 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 30.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ShuffleMapStage 30 (showString at NativeMethodAccessorImpl.java:0) finished in 0.139 s
+26/04/07 15:22:17 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:17 INFO DAGScheduler: running: Set()
+26/04/07 15:22:17 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:17 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:17 INFO ShufflePartitionsUtil: For shuffle(9), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 7.779444 ms
+26/04/07 15:22:17 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 8.754968 ms
+26/04/07 15:22:17 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:17 INFO DAGScheduler: Got job 19 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:17 INFO DAGScheduler: Final stage: ResultStage 32 (showString at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:17 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 31)
+26/04/07 15:22:17 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:17 INFO DAGScheduler: Submitting ResultStage 32 (MapPartitionsRDD[78] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 57.8 KiB, free 431.8 MiB)
+26/04/07 15:22:17 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 25.2 KiB, free 431.8 MiB)
+26/04/07 15:22:17 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on namenode:42779 (size: 25.2 KiB, free: 432.3 MiB)
+26/04/07 15:22:17 INFO SparkContext: Created broadcast 23 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:17 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 32 (MapPartitionsRDD[78] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Adding task set 32.0 with 1 tasks resource profile 0
+26/04/07 15:22:17 INFO TaskSetManager: Starting task 0.0 in stage 32.0 (TID 28) (namenode, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+26/04/07 15:22:17 INFO Executor: Running task 0.0 in stage 32.0 (TID 28)
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 4.325471 ms
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Getting 2 (1096.0 B) non-empty blocks including 2 (1096.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:17 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 7.954413 ms
+26/04/07 15:22:17 INFO Executor: Finished task 0.0 in stage 32.0 (TID 28). 5429 bytes result sent to driver
+26/04/07 15:22:17 INFO TaskSetManager: Finished task 0.0 in stage 32.0 (TID 28) in 33 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Removed TaskSet 32.0, whose tasks have all completed, from pool 
+26/04/07 15:22:17 INFO DAGScheduler: ResultStage 32 (showString at NativeMethodAccessorImpl.java:0) finished in 0.040 s
+26/04/07 15:22:17 INFO DAGScheduler: Job 19 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:17 INFO TaskSchedulerImpl: Killing all running tasks in stage 32: Stage finished
+26/04/07 15:22:17 INFO DAGScheduler: Job 19 finished: showString at NativeMethodAccessorImpl.java:0, took 0.042666 s
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 3.797933 ms
+26/04/07 15:22:17 INFO CodeGenerator: Code generated in 4.01923 ms
++------------+-----+------------------+------------------+
+|        city|users|        avg_salary|        avg_rating|
++------------+-----+------------------+------------------+
+|       Kazan|25152| 49959.06953721374| 3.005200779262091|
+| Novosibirsk|25086| 50173.74902335964|2.9947105955513083|
+|      Nizhny|24999| 50192.69250770031| 3.012017280691232|
+|Ekaterinburg|24979|50078.805276432206|3.0082221065695074|
+|         SPB|24941| 49831.75951244938|3.0044124132953813|
++------------+-----+------------------+------------------+
+only showing top 5 rows
+
+
+--- Active Users: 104,904 (69.9%) ---
+
+--- Category Statistics ---
+26/04/07 15:22:18 INFO CodeGenerator: Code generated in 13.581945 ms
+26/04/07 15:22:18 INFO DAGScheduler: Registering RDD 83 (showString at NativeMethodAccessorImpl.java:0) as input to shuffle 10
+26/04/07 15:22:18 INFO DAGScheduler: Got map stage job 20 (showString at NativeMethodAccessorImpl.java:0) with 2 output partitions
+26/04/07 15:22:18 INFO DAGScheduler: Final stage: ShuffleMapStage 33 (showString at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:18 INFO DAGScheduler: Parents of final stage: List()
+26/04/07 15:22:18 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:18 INFO DAGScheduler: Submitting ShuffleMapStage 33 (MapPartitionsRDD[83] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:18 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 50.9 KiB, free 431.8 MiB)
+26/04/07 15:22:18 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 22.8 KiB, free 431.7 MiB)
+26/04/07 15:22:18 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on namenode:42779 (size: 22.8 KiB, free: 432.3 MiB)
+26/04/07 15:22:18 INFO SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:18 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 33 (MapPartitionsRDD[83] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0, 1))
+26/04/07 15:22:18 INFO TaskSchedulerImpl: Adding task set 33.0 with 2 tasks resource profile 0
+26/04/07 15:22:18 INFO TaskSetManager: Starting task 0.0 in stage 33.0 (TID 29) (namenode, executor driver, partition 0, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:18 INFO TaskSetManager: Starting task 1.0 in stage 33.0 (TID 30) (namenode, executor driver, partition 1, PROCESS_LOCAL, 8209 bytes) 
+26/04/07 15:22:18 INFO Executor: Running task 1.0 in stage 33.0 (TID 30)
+26/04/07 15:22:18 INFO Executor: Running task 0.0 in stage 33.0 (TID 29)
+26/04/07 15:22:18 INFO BlockManager: Found block rdd_20_1 locally
+26/04/07 15:22:18 INFO BlockManager: Found block rdd_20_0 locally
+26/04/07 15:22:18 INFO CodeGenerator: Code generated in 7.395094 ms
+26/04/07 15:22:18 INFO CodeGenerator: Code generated in 12.365128 ms
+26/04/07 15:22:18 INFO CodeGenerator: Code generated in 3.325747 ms
+26/04/07 15:22:18 INFO CodeGenerator: Code generated in 3.801612 ms
+26/04/07 15:22:18 INFO Executor: Finished task 1.0 in stage 33.0 (TID 30). 2477 bytes result sent to driver
+26/04/07 15:22:18 INFO TaskSetManager: Finished task 1.0 in stage 33.0 (TID 30) in 80 ms on namenode (executor driver) (1/2)
+26/04/07 15:22:18 INFO Executor: Finished task 0.0 in stage 33.0 (TID 29). 2477 bytes result sent to driver
+26/04/07 15:22:18 INFO TaskSetManager: Finished task 0.0 in stage 33.0 (TID 29) in 85 ms on namenode (executor driver) (2/2)
+26/04/07 15:22:18 INFO TaskSchedulerImpl: Removed TaskSet 33.0, whose tasks have all completed, from pool 
+26/04/07 15:22:18 INFO DAGScheduler: ShuffleMapStage 33 (showString at NativeMethodAccessorImpl.java:0) finished in 0.091 s
+26/04/07 15:22:18 INFO DAGScheduler: looking for newly runnable stages
+26/04/07 15:22:18 INFO DAGScheduler: running: Set()
+26/04/07 15:22:18 INFO DAGScheduler: waiting: Set()
+26/04/07 15:22:18 INFO DAGScheduler: failed: Set()
+26/04/07 15:22:18 INFO ShufflePartitionsUtil: For shuffle(10), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+26/04/07 15:22:18 INFO HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+26/04/07 15:22:18 INFO CodeGenerator: Code generated in 6.896325 ms
+26/04/07 15:22:18 INFO SparkContext: Starting job: showString at NativeMethodAccessorImpl.java:0
+26/04/07 15:22:18 INFO DAGScheduler: Got job 21 (showString at NativeMethodAccessorImpl.java:0) with 1 output partitions
+26/04/07 15:22:18 INFO DAGScheduler: Final stage: ResultStage 35 (showString at NativeMethodAccessorImpl.java:0)
+26/04/07 15:22:18 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 34)
+26/04/07 15:22:18 INFO DAGScheduler: Missing parents: List()
+26/04/07 15:22:18 INFO DAGScheduler: Submitting ResultStage 35 (MapPartitionsRDD[86] at showString at NativeMethodAccessorImpl.java:0), which has no missing parents
+26/04/07 15:22:18 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 53.0 KiB, free 431.7 MiB)
+26/04/07 15:22:18 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 24.0 KiB, free 431.7 MiB)
+26/04/07 15:22:18 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on namenode:42779 (size: 24.0 KiB, free: 432.3 MiB)
+26/04/07 15:22:18 INFO SparkContext: Created broadcast 25 from broadcast at DAGScheduler.scala:1580
+26/04/07 15:22:18 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 35 (MapPartitionsRDD[86] at showString at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+26/04/07 15:22:18 INFO TaskSchedulerImpl: Adding task set 35.0 with 1 tasks resource profile 0
+26/04/07 15:22:18 INFO TaskSetManager: Starting task 0.0 in stage 35.0 (TID 31) (namenode, executor driver, partition 0, NODE_LOCAL, 7615 bytes) 
+26/04/07 15:22:18 INFO Executor: Running task 0.0 in stage 35.0 (TID 31)
+26/04/07 15:22:18 INFO ShuffleBlockFetcherIterator: Getting 2 (410.0 B) non-empty blocks including 2 (410.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+26/04/07 15:22:18 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+26/04/07 15:22:18 INFO CodeGenerator: Code generated in 9.287091 ms
+26/04/07 15:22:18 INFO Executor: Finished task 0.0 in stage 35.0 (TID 31). 5227 bytes result sent to driver
+26/04/07 15:22:18 INFO TaskSetManager: Finished task 0.0 in stage 35.0 (TID 31) in 22 ms on namenode (executor driver) (1/1)
+26/04/07 15:22:18 INFO TaskSchedulerImpl: Removed TaskSet 35.0, whose tasks have all completed, from pool 
+26/04/07 15:22:18 INFO DAGScheduler: ResultStage 35 (showString at NativeMethodAccessorImpl.java:0) finished in 0.029 s
+26/04/07 15:22:18 INFO DAGScheduler: Job 21 is finished. Cancelling potential speculative or zombie tasks for this job
+26/04/07 15:22:18 INFO TaskSchedulerImpl: Killing all running tasks in stage 35: Stage finished
+26/04/07 15:22:18 INFO DAGScheduler: Job 21 finished: showString at NativeMethodAccessorImpl.java:0, took 0.031565 s
+26/04/07 15:22:18 INFO CodeGenerator: Code generated in 3.169873 ms
++--------+------+-----------------+
+|category| count|       avg_salary|
++--------+------+-----------------+
+|    High| 12471|50517.13254751022|
+|     Low|  4330|50345.62147806005|
+|  Medium|133199|50032.90729660133|
++--------+------+-----------------+
+
+
+============================================================
+COMPLETED in 5.95 seconds
+============================================================
+26/04/07 15:22:18 INFO MapPartitionsRDD: Removing RDD 20 from persistence list
+26/04/07 15:22:18 INFO BlockManager: Removing RDD 20
+26/04/07 15:22:18 INFO SparkContext: SparkContext is stopping with exitCode 0.
+26/04/07 15:22:18 INFO SparkUI: Stopped Spark web UI at http://namenode:4040
+26/04/07 15:22:18 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/04/07 15:22:18 INFO MemoryStore: MemoryStore cleared
+26/04/07 15:22:18 INFO BlockManager: BlockManager stopped
+26/04/07 15:22:18 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/04/07 15:22:18 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/04/07 15:22:18 INFO SparkContext: Successfully stopped SparkContext
+26/04/07 15:22:18 INFO ShutdownHookManager: Shutdown hook called
+26/04/07 15:22:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-0fabdfaf-7c5d-4001-971b-3d06e33ce001
+26/04/07 15:22:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-0fabdfaf-7c5d-4001-971b-3d06e33ce001/pyspark-7cb194ee-5f33-494b-9eab-6b6764996673
+26/04/07 15:22:18 INFO ShutdownHookManager: Deleting directory /tmp/spark-3196d140-2cb5-4e3c-a939-08f68f2eb605
