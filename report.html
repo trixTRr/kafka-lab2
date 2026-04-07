@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spark/Hadoop Experiment Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        h1 { color: #2c3e50; text-align: center; }
+        h2 { color: #34495e; margin-top: 30px; }
+        table { border-collapse: collapse; width: 90%; margin: 20px auto; background-color: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #3498db; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .chart { text-align: center; margin: 30px 0; }
+        img { max-width: 90%; height: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 5px; }
+        .footer { margin-top: 30px; padding: 20px; background-color: #ecf0f1; text-align: center; border-radius: 5px; }
+        .success { color: green; font-weight: bold; }
+        .best { background-color: #d4edda; }
+    </style>
+</head>
+<body>
+    <h1> Отчет по лабораторной работе №2</h1>
+    <p style="text-align: center;"><strong>Дата выполнения:</strong> 2026-04-07 18:22:40</p>
+    <p style="text-align: center;"><strong>Директория результатов:</strong> results_20260407_181945</p>
+    <p style="text-align: center;"><strong>Датасет:</strong> 150,000 строк, 8 признаков</p>
+    
+    <h2> Результаты экспериментов</h2>
+    <table>
+        <tr>
+            <th>Эксперимент</th>
+            <th>Время (сек)</th>
+            <th>Пик RAM (MB)</th>
+            <th>Оптимизация</th>
+            <th>Партиции</th>
+        </tr>
+    
+        <tr> class="">
+            <td>1DN_Base</td>
+            <td><strong>7.54</strong></td>
+            <td>38 MB</td>
+            <td class="success">+0 MB</td>
+            <td class="">Нет</td>
+            <td>4</td>
+        </tr>
+        
+        <tr> class="">
+            <td>1DN_Optimized</td>
+            <td><strong>6.57</strong></td>
+            <td>38 MB</td>
+            <td class="success">+0 MB</td>
+            <td class="success">Да</td>
+            <td>8</td>
+        </tr>
+        
+        <tr> class="">
+            <td>3DN_Base</td>
+            <td><strong>6.09</strong></td>
+            <td>38 MB</td>
+            <td class="success">+0 MB</td>
+            <td class="">Нет</td>
+            <td>4</td>
+        </tr>
+        
+        <tr> class="best">
+            <td>3DN_Optimized</td>
+            <td><strong>5.95</strong></td>
+            <td>38 MB</td>
+            <td class="success">+0 MB</td>
+            <td class="success">Да</td>
+            <td>8</td>
+        </tr>
+        
+    </table>
+    
+    <h2> Графики производительности</h2>
+    <div class="chart">
+        <h3>Время выполнения</h3>
+        <img src="execution_time.png" alt="Execution Time">
+    </div>
+    
+    <div class="chart">
+        <h3>Сравнение DataNode</h3>
+        <img src="nodes_comparison.png" alt="Nodes Comparison">
+    </div>
+    
+    <h2> Графики использования памяти (RAM)</h2>
+    <div class="chart">
+        <h3>Пиковое использование RAM</h3>
+        <img src="memory_usage.png" alt="Memory Usage">
+    </div>
+    
+    <div class="chart">
+        <h3>Время vs Память</h3>
+        <img src="time_vs_memory.png" alt="Time vs Memory">
+    </div>
+    
+    <div class="chart">
+        <h3>Разбивка времени</h3>
+        <img src="time_breakdown.png" alt="Time Breakdown">
+    </div>
+    
+    <div class="chart">
+        <h3>Тренд производительности</h3>
+        <img src="trend.png" alt="Trend">
+    </div>
+    
+    <div class="footer">
+        <h3> Выводы</h3>
+        <ul style="text-align: left; max-width: 80%; margin: 0 auto;">
+            <li> Лучшее время: <strong>5.95 секунд</strong> в конфигурации <strong>3DN_Optimized</strong></li>
+            <li> Лучшее использование RAM: <strong>38 MB</strong> в конфигурации <strong>1DN_Optimized</strong></li>
+            <li> Оптимизация на 1 DataNode дала ускорение в <strong>1.15x</strong></li>
+            <li> Масштабирование до 3 DataNodes дало ускорение в <strong>1.24x</strong></li>
+        </ul>
+    </div>
+</body>
+</html>
+    
